@@ -29,8 +29,8 @@ export class GameService {
 
       setTimeout(() => {
         hole.isThereMole = false;
-      }, 3000);
-    }, 1000);
+      }, 1500);
+    }, 600);
 
     return game;
   }
