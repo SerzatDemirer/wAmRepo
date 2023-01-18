@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="heading">
+    <h2>Whack A Mole</h2>
+    <p>{{ gameStats.time }}</p>
+  </div>
+  <div class="scoreboard">
+    <div class="score">
+      Points: <span>{{ gameStats.score }}</span>
+    </div>
+  </div>
+  <div class="holesCont">
+    <span *ngFor="let hole of holes">
+      <div class="hole" id="{{ 'hole' + hole.id }}" (click)="hitMole(hole)">
+        <img
+          class="mole_image mole"
+          [class.isNonVisible]="hole.isThereMole === false"
+          id="{{ 'mole' + hole.id }}"
+          alt=""
+          src="../../assets/image/mole.png"
+        />
+      </div>
+    </span>
+  </div>
+  <div class="buttons">
+    <button
+      class="play"
+      [disabled]="gameStats.disablePlayButton"
+      (click)="startGame()"
+    >
+      PLAY
+    </button>
+  </div>
+</div>
