@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
-import { GameStats } from 'src/model/gameStats';
-import { Hole } from 'src/model/hole';
+import { GameStats } from 'src/app/model/gameStats';
+import { Hole } from 'src/app/model/hole';
 
 @Component({
   selector: 'mole-board',

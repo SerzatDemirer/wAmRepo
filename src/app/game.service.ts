@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { GameStats } from 'src/model/gameStats';
-import { Hole } from 'src/model/hole';
+import { GameStats } from 'src/app/model/gameStats';
+import { Hole } from 'src/app/model/hole';
 
 @Injectable({
   providedIn: 'root',
@@ -29,8 +29,8 @@ export class GameService {
 
       setTimeout(() => {
         hole.isThereMole = false;
-      }, 1500);
-    }, 600);
+      }, 2000);
+    }, 800);
 
     return game;
   }
