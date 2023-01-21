@@ -3,23 +3,32 @@
   padding: 0;
   box-sizing: border-box;
   font-family: cursive;
+  cursor: pointer;
 }
 
 .heading {
+  color: rgb(244, 84, 15);
   font-size: 30px;
-  margin: 0.5em 0;
+  margin: 0.3em 0;
   text-align: center;
 }
 
 .score {
   font-size: 2em;
+}
+
+.scoreboard {
+  background-color: bisque;
   text-align: center;
+  border: 3px solid black;
+  border-radius: 26px;
+  margin-bottom: 10px;
 }
 
 .holesCont {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2em;
+  grid-gap: 1.5em;
   justify-items: center;
 }
 
@@ -57,7 +66,7 @@
 }
 
 .buttons {
-  margin-top: 2em;
+  margin-top: 1.5em;
   text-align: center;
 }
 
@@ -77,13 +86,4 @@
   height: 120px;
   transform: translate(-10px, -40px);
   pointer-events: none;
-}
-
-@keyframes hit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-30);
-  }
 }
