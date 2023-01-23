@@ -29,14 +29,10 @@ export class MoleBoardComponent implements OnInit {
   startGame(): void {
     if (this.gameStats.isStarted === true) return; //If game started return
     this.gameStats.score = 0; // Reset the score for the new game
-    let game = this.gameService.startGame(this.holes, this.gameStats); // Create game interval
-    let countDown = this.gameService.startCountDown(this.gameStats); // Create countdown interval
+    let game = this.gameService.playGame(this.holes, this.gameStats); // Creates game interval
+    let countDown = this.gameService.startCountDown(this.gameStats); // Creates countdown interval
 
-    let gameStatusChecker = this.gameService.gameStatusChecker(
-      game,
-      countDown,
-      this.gameStats
-    ); // Create Game Status Checker Interval
+    this.gameService.gameStatusChecker(game, countDown, this.gameStats); // Create Game Status Checker Interval
 
     this.gameStats.isStarted = true; //If everything is succesfull then game is started
   }

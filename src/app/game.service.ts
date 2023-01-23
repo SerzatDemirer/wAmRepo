@@ -9,7 +9,7 @@ export class GameService {
   constructor() {}
 
   public generateGameBoard(): Hole[] {
-    //generate 25 holes
+    //generates 25 holes
     let holes = [];
     for (let i = 0; i < 25; i++) {
       holes.push({ id: i, isThereMole: false });
@@ -17,7 +17,7 @@ export class GameService {
     return holes;
   }
 
-  public startGame(
+  public playGame(
     holes: Hole[],
     gameStats: GameStats
   ): ReturnType<typeof setInterval> {
