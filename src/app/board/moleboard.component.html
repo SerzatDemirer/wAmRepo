@@ -5,8 +5,10 @@
 
   <div class="scoreboard">
     <div class="score">
-      <p>Time remaining: {{ gameStats.time }}</p>
-      Points: <span>{{ gameStats.score }}</span>
+      <p>Time remaining {{ gameStats.time }}</p>
+      <div>
+        <span class="point">Points {{ gameStats.score }}</span>
+      </div>
     </div>
   </div>
   <div class="holesCont">
